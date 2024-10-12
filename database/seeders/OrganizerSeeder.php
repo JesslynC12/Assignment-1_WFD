@@ -33,7 +33,6 @@ class OrganizerSeeder extends Seeder
 
         Organizer::create([
             'name' => 'Debindo',
-            'name' => 'MSW Global',
             'description' => fake()->text(20),
             'facebook_link' => 'https://facebook.com/',
             'x_link' => 'https://x.com/dummy',
@@ -42,7 +41,6 @@ class OrganizerSeeder extends Seeder
 
         Organizer::create([
             'name' => 'HWG',
-            'name' => 'MSW Global',
             'description' => fake()->text(20),
             'facebook_link' => 'https://facebook.com/',
             'x_link' => 'https://x.com/dummy',
@@ -51,7 +49,6 @@ class OrganizerSeeder extends Seeder
 
         Organizer::create([
             'name' => 'OBKG',
-            'name' => 'MSW Global',
             'description' => fake()->text(20),
             'facebook_link' => 'https://facebook.com/',
             'x_link' => 'https://x.com/dummy',
@@ -60,7 +57,6 @@ class OrganizerSeeder extends Seeder
 
         Organizer::create([
             'name' => 'PT OSI',
-            'name' => 'MSW Global',
             'description' => fake()->text(20),
             'facebook_link' => 'https://facebook.com/',
             'x_link' => 'https://x.com/dummy',

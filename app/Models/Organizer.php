@@ -9,7 +9,7 @@ class Organizer extends Model
 {
     use HasFactory;
 
-    protected $table = 'organizer'; // Ganti jika tabel Anda memiliki nama lain
+    protected $table = 'organizers'; // Ganti jika tabel Anda memiliki nama lain
 
     protected $fillable = [
         'name',
@@ -21,8 +21,8 @@ class Organizer extends Model
     ];
 
     // Relationship with Event
-    public function event()
+    public function events()
     {
-        return $this->hasMany(Event::class, 'organizer_id');
+        return $this->hasMany(Event::class, 'organizer_events_id');
     }
 }

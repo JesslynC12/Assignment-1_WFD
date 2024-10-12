@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Carbon\Carbon;
 use App\Models\Event;
+use App\Models\Organizer;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -23,16 +24,15 @@ class EventSeeder extends Seeder
             'venue' => 'Jatim Expo',
             'date' => '2024-10-23',
             'start_time' => '09:00:00',
-            'description' => fake()->text(20),
+            'description' => fake()->text(10),
             'booking_url' => 'https://www.indonesiaexpo.com/booking',
             'tags' => 'Surabaya Science & Tech Events , Innovation Challenge',
-            'organizer_id' => rand(1,6),
-            'event_category_id' => rand(1,6),
+            'organizer_events_id' => Organizer::all()->random()->id,
+            'category_events_id' => 1,
             'active' => 1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
-            
             
     
             Event::create([
@@ -40,16 +40,77 @@ class EventSeeder extends Seeder
                 'venue' => 'The Westin',
                 'date' => '2024-10-21',
                 'start_time' => '09:00:00',
-                'description' => fake()->text(20),
+                'description' => fake()->text(10),
                 'booking_url' => 'https://www.kidsedu.com/booking',
                 'tags' => 'Kids , Education',
-                'organizer_id' => rand(1,6),
-                'event_category_id' => rand(1,6),
+                'organizer_events_id' => Organizer::all()->random()->id,
+                'category_events_id' => 1,
                 'active' => 1,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ]);        
+            ]);   
             
+            Event::create([
+                'title' => 'Surabaya Great Expo 2024',
+                'venue' => 'Grand City Surabaya',
+                'date' => '2024-10-16',
+                'start_time' => '08:00:00',
+                'description' => fake()->text(10),
+                'booking_url' => 'https://surabayagreatexpo.com/booking',
+                'tags' => 'Investasi , Trading , Bisnis',
+                'organizer_events_id' => Organizer::all()->random()->id,
+                'category_events_id' => 1,
+                'active' => 1,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]); 
+
+            Event::create([
+                'title' => 'SMEX (Surabaya Music,Multimedia, and Lighting Expo 2024)',
+                'venue' => 'Grand City Surabaya',
+                'date' => '2024-09-29',
+                'start_time' => '08:00:00',
+                'description' => fake()->text(10),
+                'booking_url' => 'https://www.smex.com/booking',
+                'tags' => 'Music , Multimedia , Lighting',
+                'organizer_events_id' => Organizer::all()->random()->id,
+                'category_events_id' => 1,
+                'active' => 1,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]); 
+
+            Event::create([
+                'title' => 'Japan Edu Expo 2024',
+                'venue' => 'Hotel Said',
+                'date' => '2024-09-22',
+                'start_time' => '08:00:00',
+                'description' => fake()->text(10),
+                'booking_url' => 'https://www.japanedu.com/bboking',
+                'tags' => 'Universitas , Education',
+                'organizer_events_id' => Organizer::all()->random()->id,
+                'category_events_id' => rand(1,6),
+                'active' => 1,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]); 
+            
+            Event::create([
+                'title' => 'Surabaya Hospital Expo 2024',
+                'venue' => 'Grand City Surabaya',
+                'date' => '2024-10-11',
+                'start_time' => '08:00:00',
+                'description' => fake()->text(10),
+                'booking_url' => 'https://www.hospitalexpo.com/booking',
+                'tags' => 'Health , Medical',
+                'organizer_events_id' => Organizer::all()->random()->id,
+                'category_events_id' => rand(1,6),
+                'active' => 1,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]); 
+
+
         // Event::create(['title' => 'Kids Education Expo 2024', 'active' => 1]);
         // Event::create(['title' => 'Surabaya Great Expo 2024', 'active' => 1]);
         // Event::create(['title' => 'SMEX (Surabaya Music,Multimedia, and Lighting Expo 2024)', 'active' => 1]);

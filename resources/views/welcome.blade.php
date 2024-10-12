@@ -4,12 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <!--<title>Laravel-Database</title>-->
         <link href="https://cdn.datatables.net/v/dt/dt-2.1.8/datatables.min.css" rel="stylesheet">
         <script src="https://cdn.datatables.net/v/dt/dt-2.1.8/datatables.min.js"></script>
-
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -56,8 +53,6 @@ elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "Americ
 elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
 elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
 elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
-
-
 </script>
 
 

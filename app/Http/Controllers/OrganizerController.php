@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Organizer;
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
 
 class OrganizerController extends Controller
 {

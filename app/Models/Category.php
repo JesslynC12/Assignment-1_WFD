@@ -17,8 +17,8 @@ class Category extends Model
     ];
 
     // Relationship with Event
-    public function event()
+    public function events()
     {
-        return $this->hasMany(Event::class, 'events_category_id');
+        return $this->hasMany(Event::class, 'category_events_id');
     }
 }

@@ -17,11 +17,11 @@ use App\Http\Controllers\OrganizerController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('base.base');
 });
 Route::resource('organizers', OrganizerController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('events', EventController::class);
 
-Route::get('/events', [EventController::class, 'list'])->name('events.list');
-Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
+// Route::get('/events', [EventController::class, 'list'])->name('events.list');
+// Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');

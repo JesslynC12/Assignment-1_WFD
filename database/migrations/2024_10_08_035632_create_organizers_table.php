@@ -14,10 +14,10 @@ return new class extends Migration //migration untuk membuat tabel"nya
         Schema::create('organizers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description')->nullable();
-            $table->string('facebook_link')->nullable();
-            $table->string('x_link')->nullable();
-            $table->string('website_link')->nullable();
+            $table->text('description');
+            $table->string('facebook_link');
+            $table->string('x_link');
+            $table->string('website_link');
             $table->boolean('active')->default(1);
             $table->timestamps();
         });

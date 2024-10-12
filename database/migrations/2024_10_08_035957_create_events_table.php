@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('description');
             $table->string('booking_url')->nullable();
             $table->string('tags');
-            $table->foreignId('organizer_id')->constrained();
-            $table->foreignId('event_category_id')->constrained();
+            $table->foreignId('organizer_events_id')->constrained('organizers')->onDelete('cascade');
+            $table->foreignId('category_events_id')->constrained('event_categories')->onDelete('cascade');
             $table->boolean('active')->default(1);
             $table->timestamps();
         });
